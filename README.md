@@ -1,0 +1,2 @@
+# Sleek Maker - Resume Builder
+This is a simple React app that builds a resume and exports to PDF using react-to-print. Upload the contents of this folder to your GitHub repository root and run CI/Pages to deploy.
