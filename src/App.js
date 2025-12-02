@@ -199,4 +199,39 @@ export default function App() {
                 </div>
                 <p className="font-semibold">{exp.company}</p>
                 <p className="text-sm mt-1 text-gray-600">{exp.description}</p>
-              </div
+              </div>
+            ))}
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4" style={{ color: color }}>
+              Education
+            </h2>
+            {data.education.map((edu) => (
+              <div key={edu.id} className="mb-3">
+                <div className="flex justify-between">
+                  <h3 className="font-bold">{edu.degree}</h3>
+                  <span className="text-sm text-gray-500">{edu.date}</span>
+                </div>
+                <p className="text-gray-700">{edu.school}</p>
+              </div>
+            ))}
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4" style={{ color: color }}>
+              Skills
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {data.skills.map((skill, index) => (
+                <span key={index} className="px-3 py-1 bg-gray-100 rounded text-sm font-medium text-gray-700">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+  }
